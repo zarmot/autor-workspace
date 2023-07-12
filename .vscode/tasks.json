@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "tsc watch works",
+			"command": "npx tsc",
+            "args": ["--watch"],
+            "isBackground": true,
+			"problemMatcher": "$tsc-watch"
+		}
+	]
+}

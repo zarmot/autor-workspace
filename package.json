@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "autor-workspace",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "autor": "^0.500.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "typescript": "^5.1.6"
+  }
+}
