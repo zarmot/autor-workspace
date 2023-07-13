@@ -2,7 +2,7 @@
 //should be able to see the log files in the ".autor" folder, also support debug through breakpoints
 import Autor from "autor"
 
-const autor = Autor()
+const autor = await Autor()
 
 //stdout will not save to file in default, can enable via config
 console.log("hello autor!")

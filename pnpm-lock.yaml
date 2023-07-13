@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   autor:
-    specifier: ^0.500.0
-    version: 0.500.0
+    specifier: ^0.501.0
+    version: 0.501.0
 
 devDependencies:
   '@types/node':
@@ -19,18 +19,18 @@ devDependencies:
 
 packages:
 
-  /@autor/api@0.500.0:
-    resolution: {integrity: sha512-xAnrMIALmMS/23i0KUtkhF2sURMg8uSzZ+/OdrOpWjTy8U82ItXKS80gJ5PmgC25RDwnp8FLj/kNnUA1mrXuiQ==}
+  /@autor/api@0.501.0:
+    resolution: {integrity: sha512-ku7j/06FxLS5Pn/w/sPuSA/srrLlMZzr4vgVRL78vrt/II68qEk1Cz1JO8qmmvZfePOJMreqBGWNuHnXqu4lhQ==}
     dev: false
 
   /@types/node@20.4.1:
     resolution: {integrity: sha512-JIzsAvJeA/5iY6Y/OxZbv1lUcc8dNSE77lb2gnBH+/PJ3lFR1Ccvgwl5JWnHAkNHcRsT0TbpVOsiMKZ1F/yyJg==}
     dev: true
 
-  /autor@0.500.0:
-    resolution: {integrity: sha512-+FVBJknu3KEQO7mQmaoV0nGFkAC0+gFbtQqkWXgXAWM4FgqKbFTjD8FwseAwc9AjXZ6sNp7dyi7tUa5RbVTSUg==}
+  /autor@0.501.0:
+    resolution: {integrity: sha512-7KNRhttoMYzXi2XeeZTMEZAXKSieClVqnkT32XKalVdjsQtNLaJ2vMMseuGg4Y3WHMlywb7dQyH5qx0kRtrVRA==}
     dependencies:
-      '@autor/api': 0.500.0
+      '@autor/api': 0.501.0
     dev: false
 
   /typescript@5.1.6:
