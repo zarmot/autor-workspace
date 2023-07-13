@@ -8,6 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch",
+            "console": "integratedTerminal",
             "program": "${workspaceFolder}/${relativeFile}",
             "outFiles": ["${workspaceFolder}/.build/${relativeFileDirname}/${fileBasenameNoExtension}.js"],
             "args": [
