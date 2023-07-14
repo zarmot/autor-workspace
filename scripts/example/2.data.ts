@@ -5,10 +5,9 @@ const autor = await Autor()
 const datafile = "test/1"
 
 let data = 0
-try {
-  //JSON.parse() frrom file
-  data = await autor.data.load(datafile)
-} catch {}
+
+//JSON.parse() from file
+data = await autor.data.load(datafile) ?? data
 console.log(data)
 
 data++

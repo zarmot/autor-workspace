@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useRef, useReducer } from 'react'
 import * as ink from 'ink'
 
 import * as components from "./components.js"
@@ -8,12 +8,10 @@ declare global {
   var React: typeof React
   var useState: typeof React.useState
   var useEffect: typeof React.useEffect
-  var useRef: typeof React.useRef
 }
 global.React = React
 global.useState = React.useState
 global.useEffect = React.useEffect
-global.useRef = React.useRef
 
 //Ink
 declare global {
@@ -48,12 +46,12 @@ function _useScript<T>(fn: () => AsyncGenerator<T>) {
   const update = _useUpdate()
   const ref = useRef<T>()
   useEffect(() => {
-    (async () => {
-      for await (const r of fn()) {
-        ref.current = r
+    call(async () => {
+      for await (const data of fn()) {
+        ref.current = data
         update()
       }
-    })()
+    })
   }, [update])
   return ref.current
 }
@@ -62,13 +60,13 @@ global.useScript = _useScript
 declare global {
   var useRefresh: typeof _useRefresh
 }
-function _useRefresh(wait: Promise<any>, ms = 500) {
+function _useRefresh(until?: Promise<any>, interval = 500) {
   const update = useUpdate()
   useEffect(() => {
     const timer = setInterval(() => {
       update() 
-    }, ms)
-    wait.then(() => {
+    }, interval)
+    until?.then(() => {
       update()
       clearInterval(timer)
     })

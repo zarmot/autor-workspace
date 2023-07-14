@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   autor:
-    specifier: ^0.510.0
-    version: 0.510.0
+    specifier: 0.530.0
+    version: 0.530.0
   cli-spinners:
     specifier: ^2.9.0
     version: 2.9.0
@@ -33,10 +33,6 @@ devDependencies:
     version: 5.1.6
 
 packages:
-
-  /@autor/api@0.510.0:
-    resolution: {integrity: sha512-z3lZCzFOjmf3xzfLE+/1NVLDecnBnSBtAGKI1RIuaOTe0oEEX6aMo6ckFT7turSG14ZWBXgzgIPvw+0LMIKcsQ==}
-    dev: false
 
   /@types/node@20.4.1:
     resolution: {integrity: sha512-JIzsAvJeA/5iY6Y/OxZbv1lUcc8dNSE77lb2gnBH+/PJ3lFR1Ccvgwl5JWnHAkNHcRsT0TbpVOsiMKZ1F/yyJg==}
@@ -77,10 +73,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
-  /autor@0.510.0:
-    resolution: {integrity: sha512-n5Zz3z/OUbeZ9H+gyDi0R65yfVexqVv/UUCnB0QPnAD3BbzmO2hGcRENKRLZGyGc89GpFwmJDgEeKgoTiZ/nZA==}
-    dependencies:
-      '@autor/api': 0.510.0
+  /autor@0.530.0:
+    resolution: {integrity: sha512-fkDFuJym1jBMoH2Lmg+c2iJa0ONL7KvaTQT63rvLAX33nKzQIZV7ZDtgZ1+jOD6KOgOtIeLd4Xt8HtAW19PqwA==}
     dev: false
 
   /chalk@5.3.0:

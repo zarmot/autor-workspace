@@ -9,7 +9,7 @@ export function TaskView(props: {
     <Ink.Box>
       <Task
         label={ctx.name ?? "Task"}
-        state={(() => {
+        state={call(() => {
           if (ctx.state === TaskState.Running) {
             return "loading"
           } else if (ctx.state === TaskState.Error) {
@@ -19,7 +19,7 @@ export function TaskView(props: {
           } else {
             return "pending"
           }
-        })()}
+        })}
         status={ctx.message as any}
         spinner={ctx.state === TaskState.Running && spinners.star as any}
       />

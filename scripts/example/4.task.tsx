@@ -14,6 +14,7 @@ for (let index = 0; index < 50; index++) {
 }
 const w = queue.run(5)
 await render(() => {
-  useRefresh(w)
+  //timed rerender until promise resolve
+  useRefresh(w, 500)
   return <Atui.QueueView queue={queue}/>
 })

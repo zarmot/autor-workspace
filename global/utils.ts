@@ -2,8 +2,8 @@ declare global {
   var call: typeof _call
   var wait: typeof _wait
 }
-function _call(fn: () => Promise<void>) {
-  fn()
+function _call<T>(fn: () => T) {
+  return fn()
 }
 global.call = _call
 
