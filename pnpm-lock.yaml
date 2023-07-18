@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   autor:
-    specifier: 0.560.0
-    version: 0.560.0
+    specifier: ^1.1000.0
+    version: 1.1000.0
   cli-spinners:
     specifier: ^2.9.0
     version: 2.9.0
@@ -73,8 +73,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
-  /autor@0.560.0:
-    resolution: {integrity: sha512-gLvAomseQMcTgjp9KHhNy3LpEWXloUnH/oKUwsXteX8Q6qd2rbMTXvEV+k3DHPV826c7eFkn2/uWANWU0Ff+1A==}
+  /autor@1.1000.0:
+    resolution: {integrity: sha512-qMVqGl6qM4AA7dtlPfkO9PLgQK96EGC6X0DAxeAuL6lPLZQbR21WiQwIhpNBK34N9BcfKW/tZH6xf55ZC5b1lg==}
     dev: false
 
   /chalk@5.3.0:
