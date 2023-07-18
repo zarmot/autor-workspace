@@ -2,8 +2,8 @@
 //should be able to see the log files in the ".autor/log" folder, also support debug through breakpoints
 import Autor from "autor"
 
-const autor = await Autor((cfg) => {
-  //you can change config here, this function will be called after "autor.cfg.ts"
+await Autor(() => {
+  //you can change config here
   //this parameter is optional, you can directly call "Autor()" 
 })
 
@@ -11,7 +11,7 @@ const autor = await Autor((cfg) => {
 console.log("hello autor!")
 
 //open a console witch can log to default console and also save to file
-const xconsole = autor.logger.open_xconsole("x.log")
+const xconsole = Log.open_xconsole("x.log")
 xconsole.log("hello autor!")
 
 //error show log to "err.log" file, can disable via "cfg.log.errlog = false"

@@ -1,11 +1,9 @@
-import { Queue } from "autor";
-
 import { TaskList } from 'ink-task-list'
 
 import { TaskView } from "./task.js";
 
 export function QueueView(props: {
-  queue: ReturnType<typeof Queue>,
+  queue: Queue,
 }) {
   const { queue } = props
   const { tasks, count } = queue

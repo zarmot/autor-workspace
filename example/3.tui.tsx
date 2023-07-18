@@ -1,6 +1,6 @@
 import Autor from "autor"
 
-const autor = await Autor()
+await Autor()
 
 const data1 = {
 	value: 0

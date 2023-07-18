@@ -1,8 +1,8 @@
 import Autor from "autor"
 
-const autor = await Autor()
+await Autor()
 
-const queue = autor.Queue()
+const queue = Tasks.Queue()
 for (let index = 0; index < 50; index++) {
   queue.task(async (hooks) => {
     hooks.set_message("waiting...")

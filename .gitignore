@@ -1,3 +1,5 @@
 .autor
 .build
 node_modules
+
+scripts/**
