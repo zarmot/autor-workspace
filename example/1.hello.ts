@@ -1,13 +1,8 @@
 //press F5 will start "tsc -w" background task and run current script
 //should be able to see the log files in the ".autor/log" folder, also support debug through breakpoints
-import Autor from "autor"
+import "autor"
 
-await Autor(() => {
-  //you can change config here
-  //this parameter is optional, you can directly call "Autor()" 
-})
-
-//stdout will not save to file in default, can enable via "cfg.log.outlog = true"
+//stdout will not save to file in default, can enable via "Alib.config.log.outlog = true" like above
 console.log("hello autor!")
 
 //open a console witch can log to default console and also save to file

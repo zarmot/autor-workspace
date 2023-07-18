@@ -1,6 +1,4 @@
-import Autor from "autor"
-
-await Autor()
+import "autor"
 
 const datafile = "test/1"
 

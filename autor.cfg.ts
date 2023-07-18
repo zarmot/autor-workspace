@@ -1,6 +1,5 @@
 import "./global/index.js"
 
-export function init(cfg: () => void) {
-  cfg?.()
+export function init() {
   Alib.__init__()
 }

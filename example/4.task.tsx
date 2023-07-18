@@ -1,6 +1,4 @@
-import Autor from "autor"
-
-await Autor()
+import "autor"
 
 const queue = Tasks.Queue()
 for (let index = 0; index < 50; index++) {
