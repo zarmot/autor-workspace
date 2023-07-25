@@ -3,7 +3,7 @@ declare global {
   var Flag: typeof _Flag
 }
 
-export function _Channel<Action extends Function = () => void>() {
+function _Channel<Action extends Function = () => void>() {
 
   const _buf: Array<number> = []
   const _subs: Array<Action | null> = []
@@ -43,7 +43,7 @@ export function _Channel<Action extends Function = () => void>() {
 }
 global.Channel = _Channel
 
-export function _Flag() {
+function _Flag() {
   let _flag: number = 0
   const get = () => {
     return _flag

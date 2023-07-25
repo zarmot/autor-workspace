@@ -5,7 +5,7 @@ declare global {
   var Web: typeof MOD
 }
 
-export const MOD = {
+const MOD = {
   open,
 }
 global.Web = MOD

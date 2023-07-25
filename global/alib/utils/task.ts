@@ -17,7 +17,7 @@ declare global {
   }
   type Queue = ReturnType<typeof Queue>
 }
-export const MOD = {
+const MOD = {
   New,
   Queue,
 }

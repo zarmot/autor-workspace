@@ -21,7 +21,7 @@ declare global {
 }
 global.Ink = ink
 global.renderer = null
-export const _render = async function(FC: React.FC, options?: ink.RenderOptions)  {
+const _render = async function(FC: React.FC, options?: ink.RenderOptions)  {
   renderer = ink.render(<FC/>, options)
   await renderer.waitUntilExit()
 }
@@ -31,18 +31,18 @@ global.render = _render
 declare global {
   var useUpdate: typeof _useUpdate
 }
-function _inc(v: number) {
+function __inc(v: number) {
   return (v + 1) & 0xffffffff 
 }
-export function _useUpdate() {
-  return useReducer(_inc, 0)[1]
+function _useUpdate() {
+  return useReducer(__inc, 0)[1]
 }
 global.useUpdate = _useUpdate
 
 declare global {
   var useRefresh: typeof _useRefresh
 }
-export function _useRefresh(until?: Promise<any>, interval = 500) {
+function _useRefresh(until?: Promise<any>, interval = 500) {
   const update = useUpdate()
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,7 +62,7 @@ global.useRefresh = _useRefresh
 declare global {
   var useScript: typeof _useScript
 }
-export function _useScript<T>(fn: () => AsyncGenerator<T>) {
+function _useScript<T>(fn: () => AsyncGenerator<T>) {
   const update = _useUpdate()
   const ref = useRef<T>()
   useEffect(() => {
@@ -80,7 +80,7 @@ global.useScript = _useScript
 declare global {
   var useScripts: typeof _useScripts
 }
-export function _useScripts<T>(fns: (() => AsyncGenerator<T>)[]) {
+function _useScripts<T>(fns: (() => AsyncGenerator<T>)[]) {
   const update = _useUpdate()
   const ref = useRef<T>()
   useEffect(() => {

@@ -9,5 +9,5 @@ console.log("hello autor!")
 const xconsole = Log.open_xconsole("x.log")
 xconsole.log("hello autor!")
 
-//error show log to "err.log" file, can disable via "cfg.log.errlog = false"
+//error show log to "err.log" file, can disable via "Alib.config.log.errlog = false"
 throw "example error"

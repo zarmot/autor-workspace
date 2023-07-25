@@ -2,13 +2,9 @@ import "./utils.js"
 
 declare global {
   var Alib: typeof MOD
+  var ___init_Alib: typeof ___init
 }
-export const MOD = {
-  __init__: () => {
-    Alib.config.clear && console.clear()
-    Log.__init__()
-    Data.__init__()
-  },
+const MOD = {
   config: {
     pure: false,
     clear: true,
@@ -28,3 +24,10 @@ export const MOD = {
   }
 }
 global.Alib = MOD
+
+function ___init()  {
+  Alib.config.clear && console.clear()
+  ___init_Alib_Data()
+  ___init_Alib_Log()
+}
+global.___init_Alib = ___init

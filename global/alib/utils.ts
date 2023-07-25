@@ -10,7 +10,7 @@ import "./utils/web.js"
 declare global {
   var call: typeof _call
 }
-export function _call<T>(fn: () => T) {
+function _call<T>(fn: () => T) {
   return fn()
 }
 global.call = _call
@@ -18,7 +18,7 @@ global.call = _call
 declare global {
   var wait: typeof _wait
 }
-export function _wait(ms: number) {
+function _wait(ms: number) {
   return new Promise<void>((r) => {
     setTimeout(r, ms)
   })

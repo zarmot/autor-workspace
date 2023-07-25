@@ -2,7 +2,7 @@ declare global {
   var ESM: typeof MOD
 }
 
-export const MOD = {
+const MOD = {
   try_load,
 }
 global.ESM = MOD

@@ -3,17 +3,27 @@ import * as pt from "path"
 
 declare global {
   var Data: MOD
+  var ___init_Alib_Data: typeof ___init
   type DataDir = ReturnType<typeof Dir>
   type DataSaver = ReturnType<typeof Saver>
 }
 
-export const MOD = {
+const MOD = {
   Dir,
   Saver,
-  __init__,
 }
 type MOD = typeof MOD & DataDir & DataSaver
 global.Data = MOD as any
+
+function ___init() {
+  const cfg = Alib.config
+  const dir = Dir(`${cfg.base}/${cfg.data.base}`)
+  Object.assign(Data, dir)
+  const saver = Saver(dir)
+  Object.assign(Data, saver)
+}
+global.___init_Alib_Data = ___init
+
 
 function Dir(path: string) {
   let _dirmked = false
@@ -56,10 +66,4 @@ function Saver(dir: DataDir) {
     load,
   }
 }
-function __init__() {
-  const cfg = Alib.config
-  const dir = Dir(`${cfg.base}/${cfg.data.base}`)
-  Object.assign(Data, dir)
-  const saver = Saver(dir)
-  Object.assign(Data, saver)
-}
+

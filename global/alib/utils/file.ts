@@ -13,7 +13,7 @@ declare global {
   }
 }
 
-export const MOD = {
+const MOD = {
   scan,
 }
 global.File = MOD

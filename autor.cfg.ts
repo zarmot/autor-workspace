@@ -1,5 +1,3 @@
-import "./global/index.js"
-
 export function init() {
-  Alib.__init__()
+  ___init_Alib()
 }

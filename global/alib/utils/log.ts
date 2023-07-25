@@ -3,18 +3,29 @@ import * as pt from "path"
 
 declare global {
   var Log: MOD
+  var ___init_Alib_Log: typeof ___init
   type LogDir = ReturnType<typeof Dir>
 }
 
-export const MOD = {
+const MOD = {
   Dir,
-  __init__,
 }
 type MOD = typeof MOD & LogDir & {
   err: ReturnType<typeof _Errlog>
   out: ReturnType<typeof _Outlog>
 }
 global.Log = MOD as any
+
+function ___init() {
+  const cfg = Alib.config
+  const logger = Dir(`${cfg.base}/${cfg.log.base}/${cfg.log.name ?? cfg.log.def_name?.() ?? _def_name()}`)
+  Object.assign(Log, logger)
+  Log.err = _Errlog(logger, cfg.log.errlog_name)
+  !cfg.pure && cfg.log.errlog && Log.err.enable()
+  Log.out = _Outlog(logger, cfg.log.outlog_name)
+  !cfg.pure && cfg.log.outlog && Log.out.enable()
+}
+global.___init_Alib_Log = ___init
 
 function _def_name() {
   const time = new Date()
@@ -166,14 +177,4 @@ function _Outlog(dir: LogDir, file: string) {
     enable,
     disable,
   }
-}
-
-function __init__() {
-  const cfg = Alib.config
-  const logger = Dir(`${cfg.base}/${cfg.log.base}/${cfg.log.name ?? cfg.log.def_name?.() ?? _def_name()}`)
-  Object.assign(Log, logger)
-  Log.err = _Errlog(logger, cfg.log.errlog_name)
-  !cfg.pure && cfg.log.errlog && Log.err.enable()
-  Log.out = _Outlog(logger, cfg.log.outlog_name)
-  !cfg.pure && cfg.log.outlog && Log.out.enable()
 }
