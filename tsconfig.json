@@ -14,5 +14,9 @@
 
     "rootDir": "./",
     "outDir": ".built",
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/.autor.ts",
+  ]
 }

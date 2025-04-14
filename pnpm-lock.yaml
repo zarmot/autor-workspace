@@ -9,40 +9,40 @@ importers:
   .:
     dependencies:
       autor:
-        specifier: ^5.5000.0
-        version: 5.5000.0
+        specifier: ^7.7000.0
+        version: 7.7000.0
     devDependencies:
       '@types/node':
-        specifier: ^22.7.5
-        version: 22.7.5
+        specifier: ^22.14.1
+        version: 22.14.1
       typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
+        specifier: ^5.7.3
+        version: 5.8.3
 
 packages:
 
-  '@types/node@22.7.5':
-    resolution: {integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==}
+  '@types/node@22.14.1':
+    resolution: {integrity: sha512-u0HuPQwe/dHrItgHHpmw3N2fYCR6x4ivMNbPHRkBVP4CvN+kiRrKHWk3i8tXiO/joPwXLMYvF9TTF0eqgHIuOw==}
 
-  autor@5.5000.0:
-    resolution: {integrity: sha512-tZqF9OJJuAnr8Eady/AsWQfUStisGL3v/y82R2NNHAvh9aK4Wxt4w0Ja1rqjWfq012/2i5ixdxvS9KLDhpg69A==}
+  autor@7.7000.0:
+    resolution: {integrity: sha512-m79424atkRhwmb33T55DQKSkM0zNUQieF6R1KGFD6EeQ8iayqTUFd+Qj5oYfPI+oDE4zmxAUxxuC2njl2P9CIQ==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
 snapshots:
 
-  '@types/node@22.7.5':
+  '@types/node@22.14.1':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 6.21.0
 
-  autor@5.5000.0: {}
+  autor@7.7000.0: {}
 
-  typescript@5.6.3: {}
+  typescript@5.8.3: {}
 
-  undici-types@6.19.8: {}
+  undici-types@6.21.0: {}
