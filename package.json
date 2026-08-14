@@ -3,14 +3,11 @@
   "name": "autor-workspace",
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "tsc -w"
-  },
   "dependencies": {
-    "autor": "^7.7000.0"
+    "autor": "^9.9000.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.1",
-    "typescript": "^5.7.3"
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
   }
 }
